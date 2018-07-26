@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.helpControle">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#009004" height="104.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Text fill="WHITE" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trabalho prático de CG">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desenvolvido por: Wellington Tatsunori Asahide" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ra: 94595" />
+      <Line endX="100.0" layoutX="115.0" layoutY="54.0" startX="-100.0" stroke="WHITE" />
+      <TextArea layoutY="104.0" prefHeight="295.0" prefWidth="600.0" text="Como desenhar formas:&#10;-Linha:&#10;   Selecione a opcao de desenhar linha, apos isso clique dois pontos diferentes para desenhar a linha&#10;-Triangulo:&#10;   Selecione a opcao de desenhar linha,&#10;   apos isso, clique em tres pontos diferentes para desenhar o triangulo&#10;-Retangulo:&#10;   Selecione a opcao de desenhar retangulo,&#10;   apos isso, clique em um ponto e depois clique em outro ponto para definir &#10;   a altura e a largura do retangulo&#10;-Circunferencia:&#10;   Selecione a opcao de desenhar circunferencia, &#10;   apos isso, clique em um ponto para definir um ponto da circunferencia&#10;   e clique em outro ponto para definir o diametro.&#10;&#10;Translacao:&#10;   -Selecione um objeto na tabela de objetos&#10;   -Clique na opcao de translacao&#10;   -Clique em um ponto na tela&#10;   O primeiro ponto do objeto sera transalado para esse ponto clicado na tela, e os demais&#10;   o acompanharao de forma equivalente&#10;&#10;Mudanca de escala:&#10;   -Primeiro sete um valor no campo de texto no lado superior direito da tela&#10;   -Selecione o objeto na tabela de objetos&#10;   -Clique na opcao de mudanca de escala&#10;   A alteracao sera executada no instante em que o clique no botao seja executado" />
+   </children>
+</AnchorPane>

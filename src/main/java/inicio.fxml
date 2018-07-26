@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<?import Modelo.Tela?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.inicioControle">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane style="-fx-background-color: #009004;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="1008.0">
+                     <children>
+                        <JFXButton fx:id="btClear" onAction="#btClearFunc" prefHeight="45.0" prefWidth="123.0" text="Clear" />
+                        <JFXButton fx:id="btRotacao" prefHeight="171.0" prefWidth="100.0" text="Rotacão" />
+                        <JFXButton fx:id="btEscala" onAction="#btEscalaFunc" prefHeight="115.0" prefWidth="100.0" text="M. Escala" />
+                        <JFXButton fx:id="btTranslacao" onAction="#btTransladarFunc" prefHeight="126.0" prefWidth="100.0" text="Translacão" />
+                        <JFXButton fx:id="btZoom" prefHeight="143.0" prefWidth="100.0" text="Zoom Extends" />
+                        <JFXTextField fx:id="tfAux" focusColor="#00d34a" prefHeight="40.0" prefWidth="135.0" promptText="Campo de texto">
+                           <HBox.margin>
+                              <Insets left="165.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="btHelp" onAction="#btHelpFunc" prefHeight="47.0" prefWidth="52.0" text="Help" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="132.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </top>
+         <left>
+            <Pane style="-fx-background-color: #009004;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="555.0" prefWidth="118.0">
+                     <children>
+                        <JFXButton prefHeight="45.0" prefWidth="129.0" text="Formas" />
+                        <JFXButton fx:id="btRetas" onAction="#btRetasFunc" prefHeight="60.0" prefWidth="110.0" text="Retas" />
+                        <JFXButton fx:id="btTriangulos" onAction="#btTriangulosFunc" prefHeight="60.0" prefWidth="116.0" text="Triangulos" />
+                        <JFXButton fx:id="btRetangulos" onAction="#btRetangulosFunc" prefHeight="60.0" prefWidth="117.0" text="Retangulos" />
+                        <JFXButton fx:id="btCircunferencias" onAction="#btCircunferenciasFunc" prefHeight="60.0" prefWidth="134.0" text="Cricunferencias" />
+                        <JFXColorPicker fx:id="cpColorPicker" prefHeight="60.0" prefWidth="126.0" />
+                        <Pane prefHeight="209.0" prefWidth="118.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="67.0" layoutX="7.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+                              <Text layoutX="36.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mouse" wrappingWidth="44.36328125" />
+                              <Text layoutX="38.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X:" />
+                              <Text layoutX="38.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y:" />
+                              <Text fx:id="mouseX" layoutX="65.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" />
+                              <Text fx:id="mouseY" layoutX="65.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" />
+                              <TextArea layoutX="5.0" layoutY="93.0" prefHeight="112.0" prefWidth="107.0" promptText="tfCoordenadas" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow height="0.0" radius="4.75" />
+               </effect>
+            </Pane>
+         </left>
+         <center>
+            <Tela fx:id="cCanvas" height="558.0" width="690.0" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <TableView fx:id="tvObjetos" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="tcObjetos" prefWidth="199.0" text="Objetos" />
+              </columns>
+            </TableView>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
