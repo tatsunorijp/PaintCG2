@@ -87,6 +87,7 @@ public class inicioControle implements Initializable{
     public void btCircunferenciasFunc(){
         forma = 4;
     }
+
     public void btTransladarFunc(){
         cCanvas.setOnMouseClicked(i -> {
             selecionada.transladar(x, y);

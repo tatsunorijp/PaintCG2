@@ -39,6 +39,9 @@ public class Retangulo extends Forma {
 
     @Override
     public void transladar(double x, double y) {
+        this.c2.x = (x - c1.x) + c2.x;
+        this.c2.y = (y - c1.y) + c2.y;
+
         this.c1.x = x;
         this.c1.y = y;
     }
